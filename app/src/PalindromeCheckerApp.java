@@ -1,5 +1,20 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        System.out.println("welcome to Palindrome Checker App management System");
+
+            String input = "madam";
+            boolean isPalindrome = true;
+
+            for (int i = 0; i < input.length() / 2; i++) {
+                if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+
+            if (isPalindrome) {
+                System.out.println(input + " is a Palindrome");
+            } else {
+                System.out.println(input + " is not a Palindrome");
+            }
+        }
     }
-}
